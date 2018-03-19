@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 
 import { fetchUser } from './apiController';
 
-class App extends React.Component {
+export class App extends React.Component {
   state = {
     id: '1',
   };
