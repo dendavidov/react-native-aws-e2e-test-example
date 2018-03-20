@@ -4,11 +4,14 @@
   "private": true,
   "main": "./src/index.js",
   "devDependencies": {
+    "appium": "^1.7.2",
+    "appium-doctor": "^1.4.3",
     "babel-preset-react-native-stage-0": "^1.0.1",
     "jest": "^22.4.2",
     "jest-react-native": "^18.0.0",
     "prettier": "^1.11.1",
-    "react-test-renderer": "16.2.0"
+    "react-test-renderer": "16.2.0",
+    "wd": "^1.6.1"
   },
   "scripts": {
     "start": "react-native start",
@@ -16,7 +19,9 @@
     "android:build": "cd android && ./gradlew assembleRelease",
     "android:release": "sh ./tools/release-android.sh",
     "ios": "react-native run-ios",
-    "test": "node node_modules/jest/bin/jest.js"
+    "test": "node node_modules/jest/bin/jest.js",
+    "appium": "appium",
+    "appium:doctor": "appium-doctor"
   },
   "jest": {
     "preset": "react-native"

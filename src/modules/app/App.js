@@ -19,18 +19,19 @@ export class App extends React.Component {
     return (
       <View style={styles.container}>
         <TextInput
+          accessibilityLabel="text"
           style={styles.input}
           onChangeText={this.handleChange}
           value={this.state.id}
           keyboardType="numeric"
         />
         <Button
+          accessibilityLabel="button"
           onPress={this.handleClick}
           title="Load"
-          accessibilityLabel="Learn more about this purple button"
         />
         <Text style={styles.text}>{this.props.user.status}</Text>
-        <Text style={styles.text}>
+        <Text style={styles.text}           accessibilityLabel="name">
           {this.props.user.data && this.props.user.data.name}
         </Text>
       </View>
