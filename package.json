@@ -19,7 +19,8 @@
     "android:build": "cd android && ./gradlew assembleRelease",
     "android:release": "sh ./tools/release-android.sh",
     "ios": "react-native run-ios",
-    "test": "node node_modules/jest/bin/jest.js",
+    "test:js": "node node_modules/jest/bin/jest.js",
+    "test": ". venv/bin/activate && LOCATION='local' py.test && deactivate",
     "appium": "appium",
     "appium:doctor": "appium-doctor"
   },

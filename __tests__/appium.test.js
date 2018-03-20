@@ -5,7 +5,7 @@ const PORT = 4723;
 const config = {
   platformName: 'Android',
   deviceName: 'Android',
-  app: './build/homeapp.android.release.apk', // relative to root of project
+  app: './android/app/build/outputs/apk/app-debug.apk', // relative to root of project
 };
 const driver = wd.promiseChainRemote('localhost', PORT);
 

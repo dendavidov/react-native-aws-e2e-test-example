@@ -17,7 +17,7 @@ export class App extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={styles.container} accessibilityLabel="testview">
         <TextInput
           accessibilityLabel="text"
           style={styles.input}
@@ -31,7 +31,7 @@ export class App extends React.Component {
           title="Load"
         />
         <Text style={styles.text}>{this.props.user.status}</Text>
-        <Text style={styles.text}           accessibilityLabel="name">
+        <Text style={styles.text} accessibilityLabel="name">
           {this.props.user.data && this.props.user.data.name}
         </Text>
       </View>
