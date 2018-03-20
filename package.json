@@ -3,24 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "main": "./src/index.js",
-  "devDependencies": {
-    "appium": "^1.7.2",
-    "appium-doctor": "^1.4.3",
-    "babel-preset-react-native-stage-0": "^1.0.1",
-    "jest": "^22.4.2",
-    "jest-react-native": "^18.0.0",
-    "prettier": "^1.11.1",
-    "react-test-renderer": "16.2.0",
-    "wd": "^1.6.1"
-  },
   "scripts": {
-    "start": "react-native start",
+    "start": "node ./node_modules/react-native/local-cli/cli.js start",
     "android": "react-native run-android",
     "android:build": "cd android && ./gradlew assembleRelease",
-    "android:release": "sh ./tools/release-android.sh",
     "ios": "react-native run-ios",
     "test:js": "node node_modules/jest/bin/jest.js",
+    "test:setup": "sh ./setup.sh",
     "test": ". venv/bin/activate && LOCATION='local' py.test && deactivate",
+    "test:collect": "sh ./collect.sh",
     "appium": "appium",
     "appium:doctor": "appium-doctor"
   },
@@ -34,5 +25,15 @@
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "appium": "^1.7.2",
+    "appium-doctor": "^1.4.3",
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "jest": "^22.4.2",
+    "jest-react-native": "^18.0.0",
+    "prettier": "^1.11.1",
+    "react-test-renderer": "16.2.0",
+    "wd": "^1.6.1"
   }
 }
