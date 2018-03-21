@@ -17,6 +17,7 @@ yarn-debug.log*
 yarn-error.log*
 
 .idea
+./android/app/app.iml
 build
 android/.gradle
 android/local.properties
