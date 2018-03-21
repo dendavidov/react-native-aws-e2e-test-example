@@ -19,6 +19,7 @@ yarn-error.log*
 .idea
 build
 android/.gradle
+android/local.properties
 android/build
 android/app/build
 ios
