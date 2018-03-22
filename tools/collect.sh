@@ -2,6 +2,10 @@
 
 . ./venv/bin/activate
 LOCATION='local'
+
+rm -rf tests
+mkdir tests
+cp ./__tests__/*.py tests
 py.test --collect-only tests/
 
 pip freeze > requirements.txt
@@ -17,4 +21,8 @@ cd ..
 
 zip -r build/test_bundle.zip tests/ wheelhouse/ requirements.txt
 
+rm -rf tests
+
 deactivate
+
+

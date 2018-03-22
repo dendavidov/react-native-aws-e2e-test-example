@@ -14,7 +14,7 @@ beforeAll(async () => {
   await driver.sleep(2000); // wait for app to load
 });
 
-test('appium renders', async () => {
+test('example test', async () => {
   expect(await driver.hasElementByAccessibilityId('text')).toBe(true);
   const text = await driver.elementByAccessibilityId('text').text();
   expect(text).toBe('1');
@@ -34,5 +34,5 @@ test('appium renders', async () => {
 
   await driver.sleep(2000);
   name = await driver.elementByAccessibilityId('name').text();
-  expect(name).toBe('Ervin Howell1');
+  expect(name).toBe('Ervin Howell');
 });
